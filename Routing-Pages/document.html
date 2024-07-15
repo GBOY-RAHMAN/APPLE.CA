@@ -1,25 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Fields Example</title>
     <style>
-        .section {
-            width: 300px;
-            height: 200px;
-            background-color: lightblue;
-            transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
-        }
-
-        .section:hover {
-            background-color: lightcoral;
-            transform: scale(1.05);
+        #password {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <div class="section">
-        Hover over this section
-    </div>
+    <label for="username">Username:</label>
+    <input type="text" id="username">
+    <br>
+    <label for="password" id="passwordLabel" style="display:none;">Password:</label>
+    <input type="password" id="password" style="display:none;">
+    
+    <script>
+        const usernameInput = document.querySelector("#username");
+        const passwordInput = document.querySelector("#password");
+        const passwordLabel = document.querySelector("#passwordLabel");
+
+        usernameInput.addEventListener("input", function() {
+            const usernameValue = usernameInput.value;
+            console.log(usernameValue);
+
+            if (usernameValue.trim() !== "") {
+                passwordInput.style.display = "inline";
+                passwordLabel.style.display = "inline";
+            } else {
+                passwordInput.style.display = "none";
+                passwordLabel.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Domain Validation</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="emailForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <span id="error" class="error hidden">Invalid email domain.</span>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const allowedDomains = ["@mail.com", "@gmai.com", "@apple.com"];
+        const emailInput = document.getElementById("email");
+        const errorSpan = document.getElementById("error");
+
+        emailInput.addEventListener("input", () => {
+            const emailValue = emailInput.value;
+            const emailDomain = emailValue.substring(emailValue.indexOf("@"));
+
+            if (allowedDomains.includes(emailDomain)) {
+                errorSpan.classList.add("hidden");
+            } else {
+                errorSpan.classList.remove("hidden");
+            }
+        });
+
+        document.getElementById("emailForm").addEventListener("submit", (event) => {
+            const emailValue = emailInput.value;
+            const emailDomain = emailValue.substring(emailValue.indexOf("@"));
+
+            if (!allowedDomains.includes(emailDomain)) {
+                event.preventDefault();
+                alert("Please enter a valid email domain.");
+            }
+        });
+    </script>
 </body>
 </html>

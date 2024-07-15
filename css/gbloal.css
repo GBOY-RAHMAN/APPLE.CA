@@ -87,7 +87,7 @@ body{ font-family: var(--global-font-family);
     top: 0;
     right: 0;
     left: 0;
-    z-index: 9999;
+    /* z-index: 9999; */
     display: block;
     margin: 0;
     width: 100%;
@@ -774,12 +774,12 @@ align-items: baseline;
     }
     .buttons_icon{margin-top: 30px;
                   display: flex;
-                  gap: 1em;
-                  
-                 
+                  gap: 1em;            
          
          
     }
+    
+
     .sigining_data{width: 100%;}
 
     .form_signin{color: #e3e1e1;
@@ -794,9 +794,10 @@ align-items: baseline;
                line-height: 1.1764805882;
                box-sizing: border-box;
                border-radius: 12px;
-              border: none;
-                  
-                 
+              border: none;}
+    .form_signin a{
+        color: #e3e1e1;
+        text-decoration: none;
     }
 
 .form_continue{
@@ -819,6 +820,122 @@ align-items: baseline;
     background-color: var(--sk-fill-blue);
 
 }
+/* siging modal */
+.user_sigin{
+    /* bottom: 100px; */
+     min-width: 50% !important;
+     min-height: 50% !important;
+     
+}
+.fa_section{
+    min-width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.image_2fa{
+    width: 50%;
+    display: block;
+}
+.sign_input{
+    display: flex;
+    width: full;
+    display: flex;
+    justify-content: center;
+}
+.signin_text{
+    font-family: var(--global-font-family);
+    font-size: 21px;
+    line-height: 1.19048;
+    font-weight: 400;
+    letter-spacing: .011em;
+    text-align:center ;
+}
+#appl_id{
+    min-width:350px ;
+    padding: 1em;
+    display: block;
+    height: 40px;
+    margin-top: 1em;
+    border: var(--footer-border-color) 1px solid;
+    border-radius: 10px;
+    background: none;
+    font-family: var(--global-font-family);
+    font-size: 17px;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.4705882353;
+    
+    
+}
+#appl_pass{
+    min-width:350px ;
+    padding: 1em;
+    display: block;
+    height: 40px;
+    margin-top: 1em;
+    border: var(--footer-border-color) 1px solid;
+    border-radius: 10px;
+    background: none;
+    font-family: var(--global-font-family);
+    font-size: 17px;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.4705882353;
+    display: none;
+}
+.forgot_signin{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+}
+#checkbox{
+    margin-right: 0.5em;
+    width: 10px;
+    height: 10px;
+    align-items: baseline;
+    justify-self: baseline;
+    border-radius: none;
+    margin-top: 5px;
+    
+}
+.remeber_me{
+    font-family: var(--global-font-family);
+    font-size: 17px;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    
+}
+.forgot_pass{
+    text-align: center;
+    margin-top: 1em;
+    font-family: var(--global-font-family);
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-decoration: none;
+    
+}
+.forgot_pass a{
+    text-decoration: none;
+    color: rgb(5, 129, 253);
+    
+}
+.create_appid{
+    text-align: center;
+    display: block;
+    margin-top: 1em;
+}
+/* siging modal */
 
 .chat_section{
     margin-top: 5em;
@@ -1283,6 +1400,11 @@ align-items: baseline;
         aspect-ratio: auto 980 / 400;
         height: 400px;
     }
+    .image_2fa{
+        width: 40%;
+        display: block;
+    
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -1345,4 +1467,10 @@ align-items: baseline;
         aspect-ratio: auto 980 / 400;
         height: 400px;
     }
+    .image_2fa{
+        width: 40%;
+        display: block;
+    
+    }
+    
 }

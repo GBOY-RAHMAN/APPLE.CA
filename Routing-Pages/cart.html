@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/gbloal.css">
+    <link rel="stylesheet" href="../css/gbloal.css">
+    <link rel="shortcut icon" href="../image_file/icons8-apple-logo-30.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/891c2fc307.js" crossorigin="anonymous"></script>
+    <!-- Remember to include jQuery :) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
     <nav class="header_bar">
         
         <ul class="global_links" id="globalnav-link">
-           <li><a href="./home.html" rel="noopener noreferrer"><span><svg height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg">
+           <li><a href="../home.html" rel="noopener noreferrer"><span><svg height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg">
                 <path d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"></path></svg></span></a></li> 
              
             <!-- <section class="global_links"> -->
@@ -45,7 +53,7 @@
             </p>
 
             <section class="buttons_icon">
-                <div class="sigining_data"> <button class="form_signin">Sign In</button></div>
+                <div class="sigining_data"> <button class="form_signin"><a href="#ex1" rel="modal:open">Sign In</a></button></div>
                 <div class="sigining_data"> <button  class="form_continue">Continue Shopping</button></div>
                 
             </section>
@@ -65,7 +73,7 @@
 
     <section class="cart_content">
         <section class="cart_items">
-         <img src="./image_file/apple-new-arrivals-checkout-201804.jpeg" alt="" class="new_arrivals">
+         <img src="../image_file/apple-new-arrivals-checkout-201804.jpeg" alt="" class="new_arrivals">
              </section>
         </section>
      
@@ -103,10 +111,33 @@
             </div>
         </section>
     </footer>
-    <script src="./next.js"></script>
+    <div id="ex1" class="modal user_sigin">
+        <div class="fa_section"> <img src="../image_file/2fa-hero-removebg-preview.png" alt="" class="image_2fa"></div>
+        <div class="sign_input">
+            <div>
+                <form action="" method="post">
+            <p class="signin_text">Sign in to Apple Store</p>
+            <input type="email" name="" id="appl_id" placeholder="Enter Apple ID">
+            <p class="hey"></p>
+            <input type="password" name="" id="appl_pass" placeholder="Password">
+            <div class="forgot_signin"><input type="checkbox" name="check" id="checkbox"><span class="remeber_me">Remember Me</span>
+               
+            </div>
+            <p class="forgot_pass"> <a href="" rel="modal:close">Forgot Password? <i class="fa-regular fa-arrow-up"></i></i></a> <span class="create_appid">Don’t have an Apple ID? <a href="" rel="modal:close">Create yours now <i class="fa-regular fa-arrow-up"></i></a></span></p>
+            
+        </div>
+       
+    </form>
+        </div>
+        
+       
+      </div>
+      
+      <script src="https://kit.fontawesome.com/891c2fc307.js" crossorigin="anonymous"></script>
+    <script src="../js/next.js"></script>
     <script>
         setPageTitle("Cart Item")
     </script>
-    <script src="https://kit.fontawesome.com/891c2fc307.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>
