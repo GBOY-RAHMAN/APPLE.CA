@@ -1,19 +1,24 @@
-// .d8888b.  .d8888b. 8888888888 
-// d88P  Y88bd88P  Y88b      d88P 
-// 888    888888    888     d88P  
-// 888    888888    888    d88P   
-// 888    888888    888 88888888  
-// 888    888888    888  d88P     
-// Y88b  d88PY88b  d88P d88P      
-//  "Y8888P"  "Y8888P" d88P  
 
-// setting the page title accross all the page
+// Function for setting the page title accross all the page
 
 function setPageTitle(title){
     document.title = title;
 }
 
-
+// let swipperBotton = document.querySelector(".bttn_swiper")
+//           swipperBotton.addEventListener("click",  function() {
+//             alert("hey clickmore")
+//           })
+document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop: true, // Enable looping
+    });
+});
+        
 // validation for sigup form 
 const Email = document.querySelector("#appl_id");
         const welcom = document.querySelector(".hey");
@@ -46,6 +51,9 @@ const Email = document.querySelector("#appl_id");
         });
         // validation for sigup form 
 
+
+        
+ 
         // 
 // jquery 
 

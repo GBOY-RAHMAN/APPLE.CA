@@ -978,10 +978,25 @@ align-items: baseline;
     background:none !important ;
     box-shadow: none !important;
     max-width: 980px !important;
-    min-height: 606px;
+    min-height: 640px;
     padding: 115px 0 0;
     
 }
+.MAC_SELECT{
+    border-radius: 30px;
+    background: #f0f0f0;
+    width: 100%;
+    border: 2px solid #f0f0f0;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-weight: 600;
+    letter-spacing: -.016em;
+    line-height: 1.4285914286;
+    margin: auto;
+    padding: 3px;
+}
+
 .IPHONE_SELECT {
     border-radius: 30px;
     background: #f0f0f0;
@@ -1022,10 +1037,11 @@ align-items: baseline;
 }
 
 .select_rfciphone{
+    min-width: fit-content;
     display: flex;
     background: #ffff;
     margin-top: 1em;
-    height: 600px;
+    min-height: fit-content;
     display: flex;
         flex-direction: column;
         border-radius: 15px;
@@ -1035,7 +1051,7 @@ align-items: baseline;
 
 .display_types{
     display: flex;
-    gap: 10px;
+    gap: 2px;
     width: 100%;
 }
 .inf_descrip{
@@ -1093,8 +1109,35 @@ align-items: baseline;
 .img_content_scroller{
     margin-top: 20px;
     width: 100%;
-    
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 600px; /* adjust width as needed */
+    margin: 0 auto;
 }
+.swiper-wrapper{
+    display: flex;
+    transition: transform 0.3s ease;
+    /* display: none; */
+}
+.bttn_swiper{width: 40px;
+             height: 40px;
+             margin-top: 50px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+}
+.bttn_swipers{
+             width: 40px;
+             height: 40px;
+             margin-top: 50px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+}
+
+
 .canvas_section{
     font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
         color: #1d1d1f;
@@ -1150,6 +1193,13 @@ align-items: baseline;
     padding-bottom: 10px;
 }
 
+.typography-mac-tight{
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    line-height: 1.2353641176;
+}
 .typography-body-tight {
     font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -1165,8 +1215,12 @@ align-items: baseline;
     letter-spacing: -.01em;
     line-height: 1.3333733333;
     padding: 0px 12px 18px 24px;
+   width: 100%;
+   
     }
-
+.overlaytext{
+    min-width: full;
+}
     .rfc_footer_buyiphone{
         
         padding: 10px 2em 0px 2em; 
