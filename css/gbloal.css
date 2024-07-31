@@ -4,7 +4,12 @@
  margin: 0;
 
 }
+
+/* Variable CSS */
 :root {
+    
+    --global-font-family:SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --second-global-font-family: Comic Sans MS Bold,Avenir Roman,Avenir Next Condensed Bold;
     --sk-body-text-color: #1d1d1f;
     --sk-headline-text-color: #1d1d1f;
     --sk-body-background-color: #fff;
@@ -70,7 +75,7 @@
     --r-globalnav-font-size: 17px;
     --globalnav-background: none;
     --globalnav-backdrop-filter: none;
-    --global-font-family:SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    
 }
 
 body{ font-family: var(--global-font-family);
@@ -727,16 +732,7 @@ align-items: baseline;
         font-weight: 400;
         cursor: pointer;
         
-        /* color: #fff;
-        background-color:#0071e3;;
         
-        align-items: baseline;
-        font-size: 14px;
-        font-weight: 400;
-        min-width: auto;
-        letter-spacing: -.016em;
-    line-height: 1.2857742857;
-    text-align: center; */
         
     }
     .rf-hcard-content-moretext {
@@ -802,6 +798,7 @@ align-items: baseline;
 
 .form_continue{
                 color: var(--sk-fill-blue);
+               
                  background-color: #ffff;
                  width: 100%;
                  padding: 8px;
@@ -814,7 +811,15 @@ align-items: baseline;
                border-radius: 12px;
               border: var(--sk-fill-blue) 1px solid;
 }
+.form_continue a{
+    text-decoration: none;
+    color: #06c;
+}
 
+.form_continue a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
 .form_continue:hover{
     color: #ffff;
     background-color: var(--sk-fill-blue);
@@ -1259,9 +1264,281 @@ align-items: baseline;
     }
 /* style for modal iphone */
 
+/* style for the airtags */
+.nav_airtag{
+    
+    padding: 0 calc(8px / var(--r-globalnav-text-zoom-scale, 1));
+    border-bottom: 1px solid rgb(181, 181, 181);
+    font-size: 15px;
+    font-weight: 500;
+    align-items: center;
+    line-height: 1;
+    cursor: default;
+    margin: auto ;
+    width: auto;
+    background-color: #ffffff;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    -webkit-user-select: none;
+    user-select: none;
+    list-style: none;
+    font-family: var(--global-font-family);
+    transition: color .32s cubic-bezier(.4,0,.6,1);
+    letter-spacing: -.01em;
+}
+.airtag_acces{
+    
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 71%;
+    padding: 0 calc(5px / var(--r-globalnav-text-zoom-scale, 1));
+  
+}
+.nowrap{
+    padding-right: 3em;
+}
+.airtags_browse{
+    padding-right: 0.5em;
+    display: inline;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.airtags-text{
+    padding-left: 0.2em;
+    font-size: 36px;
+    font-weight: 500;
+    align-items: center;
+    line-height: 1;
+    display: inline;
+}
+.footer_wrapper{
+   
+    display: block;
+    width: 100%; 
+    border-top:  1px solid #d2d2d7 ;
+    border-bottom: 1px solid #d2d2d7;
+    height: 60px;
+    margin-top: 20px;
+    align-items: center;
+    background: #ffffff;
+ 
+}
+.filter_item{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    color: #6e6e73;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    line-height: 1.3333733333;
+    width: 90%; 
+    justify-items: center;
+    margin-top: 20px;
+    
+    
+    
+}
+.filter_text{
+   gap: 2px;
+   display: flex;   
+}
+
+.filer_button{
+  position: relative;
+   bottom: 2px;
+}
+.large-4{
+    display: flex;
+    /* gap: 1px; */
+    /* margin-top: 5px; */
+}
+.airtags-sections{
+   
+    width: 480px;
+    background-color: #ffffff;
+    height: 460px;
+    display: flex;
+   border: 1px solid #a6a6a7;;
+    justify-content: center;
+}
+
+.rf-producttile-colorswatches{
+    align-items: center;
+   display: flex;
+   gap: 5px;
+    justify-content: center;
+    list-style-type: none;
+    margin-inline: auto;
+    margin-bottom: 2.5em;
+    margin-top: 1em;
+}
+.airtag_prices{
+    font-family: var(--global-font-family);
+    color: #5d5d60;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    line-height: 1.3333733333;
+    text-align: center;
+}
+.airtag_prices a{
+    text-decoration: none;
+    color: #67676b;
+}
+.price_airtag{
+    display: block;
+    margin-top: 4em;
+}
+.blockitems_forbigscreen{
+    display: none;
+}
+     /* AIR TAGS */
+
+/* VISION-PRO */
+.section-herovision {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+}
+.vision_pro{
+    min-width:  40%;
+    min-height: auto;
+    align-items: center;
+}
+.hero-headline{
+display: flex;
+align-content: center;
+font-size: 35px;
+font-weight: 400;
+font-family: var(--global-font-family);
+color: #1d1d1f;
+justify-content: center;
 
 
-     /* cart items  */
+}
+.figrueicon{
+    position: relative;
+    bottom: 14px;
+    align-items: baseline;
+}
+.book_demos{
+    display: block;
+    font-family: var(--global-font-family);
+    color: #ff5a00;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -.01em;
+    line-height: 1.3333733333;
+    text-align: center;
+}
+.demo_visionpro{
+    position: relative;
+    bottom: 130px;
+}
+.digital_age{
+    font-family: var(--global-font-family);
+    color: #2f2f30;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -.01em;
+    line-height: 1.5333733333;
+    text-align: center;
+    background-color: #ffffff;
+   margin-bottom: 5em;
+    
+}
+.vision_prosections{
+background-color: white;
+}
+.closer_look{
+    justify-content: center;
+    width: 160px;
+    height: 35px;
+    background: white;
+    border: none;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    
+   
+}
+.take_look{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+/* support */
+.support{
+   
+    width: 60%;
+    margin: auto;
+
+}
+.support_header{
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+}
+.inputsupport{
+    display: block;
+    width: 70%;
+    height: 50px;
+    border: 2px solid #0071e3;
+    border-radius: 13px;
+    padding: 10px;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: -.01em;
+    margin-top: 1em;
+}
+.input_ask{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: -.01em;
+  
+}
+.about_us{
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -.01em;
+    margin-bottom: 2EM;
+}
+.about_us a{
+    text-decoration: none;
+    color: #06c;
+}
+.about_thispage{
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -.01em;
+    margin-bottom: 2em;
+}
+/*  */
+/* media Query ------------- media Query */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     /* body{
@@ -1314,6 +1591,29 @@ align-items: baseline;
             height: 400px;
         }
        .IPHONE_SELECT{display: none;}
+       .airtag_acces{width: 100%;
+        
+    }
+       .nowrap{
+        padding-right: 0;
+    }
+    .airtags_browse{
+       
+        display: none;
+    }
+    .blockitems_forbigscreen{
+        display: none;
+    }
+    .vision_pro{
+        min-width:  40%;
+        min-height: auto;
+        align-items: center;
+    }
+    .support{
+   
+        width: 100%;
+        margin: auto;
+    }
 }
 
 
@@ -1361,6 +1661,29 @@ align-items: baseline;
             aspect-ratio: auto 980 / 400;
             height: 400px;
         }
+        .airtag_acces{width: 100%;}
+        .nowrap{
+         padding-right: 2.5em;
+     }
+ 
+     .airtags_browse{
+       
+        display: none;
+    }
+    .blockitems_forbigscreen{
+        display: none;
+    }
+    .vision_pro{
+        min-width:  40%;
+        min-height: auto;
+        align-items: center;
+    }
+    .support{
+   
+        width: 100%;
+        margin: auto;
+    }
+    
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -1409,6 +1732,23 @@ align-items: baseline;
             aspect-ratio: auto 980 / 400;
             height: 400px;
         }
+        .airtag_acces{width: 100%;}
+        .nowrap{
+         padding-right: 2.5em;
+     }
+     .blockitems_forbigscreen{
+        display: flex;
+    }
+    .vision_pro{
+        max-width:  50%;
+        min-height: auto;
+        align-items: center;
+    }
+    .support{
+   
+        width: 70%;
+        margin: auto;
+    }
 }
 
 
@@ -1458,6 +1798,19 @@ align-items: baseline;
         width: 40%;
         display: block;
     
+    }
+    .airtag_acces{width: 76%;}
+        .nowrap{
+         padding-right: 2.5em;
+     }
+     .airtags_browse{
+        padding-right: 0.5em;
+        display: inline;
+    }
+    .support{
+   
+        width: 60%;
+        margin: auto;
     }
 }
 
@@ -1526,5 +1879,12 @@ align-items: baseline;
         display: block;
     
     }
-    
+    .airtag_acces{width: 71%;}
+        .nowrap{
+         padding-right: 2.5em;
+     }
+     .airtags_browse{
+        padding-right: 0.5em;
+        display: inline;
+    }
 }
